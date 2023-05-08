@@ -38,7 +38,7 @@ import Tables from "../views/examples/Tables.js";
 import Profile from "../views/examples/Profile.js";
 import Index from "../views/Index.js";
 
-const Admin = () => {
+const Admin = ({ props }) => {
   const mainContent = React.useRef(null);
 
   const params = useParams();
@@ -80,6 +80,15 @@ const Admin = () => {
     });
   };
 
+  const getBrandText = (path) => {
+    for (let i = 0; i < routes.length; i++) {
+      if (location.pathname.indexOf(routes[i].path) !== -1) {
+        return routes[i].name;
+      }
+    }
+    return "Brand";
+  };
+
   useEffect(checkUser, []);
 
   const [modal, setModal] = useState(false);
@@ -98,7 +107,6 @@ const Admin = () => {
 
   useEffect(() => getTransactions);
 
-  console.log(params);
   return (
     <>
       {/* <video
@@ -158,7 +166,7 @@ const Admin = () => {
           </div>
         ) : (
           <>
-            <AdminNavbar brandText={"hello"} />
+            <AdminNavbar brandText={getBrandText(location.pathname)} />
             {params.view === "tables" ? (
               <Tables />
             ) : params.view === "user-profile" ? (

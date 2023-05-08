@@ -348,6 +348,7 @@ function App() {
         }}
       >
         <Routes>
+          <Route path="*" element={<AdminLayout props={location} />} />
           <Route path="/:view" element={<AdminLayout props={location} />} />
 
           <Route path="/withdraw" element={<WidthrawPage />} />
