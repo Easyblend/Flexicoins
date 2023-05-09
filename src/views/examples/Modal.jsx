@@ -66,7 +66,7 @@ const Modal = ({
         const paystack = new PaystackPop();
 
         paystack.newTransaction({
-          key: process.env.REACT_APP_PAYSTACK_KEY,
+          key: "pk_test_477bc5aa719010f8bc1b1f78af44b9e4da32c035",
           email: email,
           amount: purchasingAmount * 100,
           onSuccess: async () => {
