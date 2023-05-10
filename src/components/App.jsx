@@ -348,7 +348,6 @@ function App() {
         }}
       >
         <Routes>
-          <Route path="*" element={<AdminLayout props={location} />} />
           <Route path="/:view" element={<AdminLayout props={location} />} />
 
           <Route path="/withdraw" element={<WidthrawPage />} />
@@ -356,6 +355,7 @@ function App() {
 
           <Route path="/auth/Register" element={<AuthRegister />} />
           <Route path="/auth/login" element={<AuthLogin />} />
+          <Route path="*" element={<AdminLayout props={location} />} />
         </Routes>
       </CurrencyRatesContext.Provider>
 
