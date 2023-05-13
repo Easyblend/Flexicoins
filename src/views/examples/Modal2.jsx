@@ -98,6 +98,7 @@ const Modal2 = ({
                   success: "Payment Successful",
                 }
               );
+              navigate("/admin/index");
               window.location.reload();
               setModal2(false);
             } catch (error) {
