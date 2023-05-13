@@ -83,20 +83,20 @@ const Header = ({ usdPurchase, gpbPurchase, btcPurchase, ethPurchase }) => {
       gbpTotals = (Number(price.Recieved) + Number(gbpTotals)).toFixed(2);
     });
 
-    setGbpTotal(gbpTotals - totalGbpWithdraw);
+    setGbpTotal((gbpTotals - totalGbpWithdraw).toFixed(2));
 
     let btcTotals = "";
     btcPurchase?.map((price) => {
       btcTotals = (Number(price.Recieved) + Number(btcTotals)).toFixed(4);
     });
-    setBtcTotal((btcTotals - totalBtcWithdraw).toFixed(4));
+    setBtcTotal((btcTotals - totalBtcWithdraw).toFixed(2));
 
     let ethTotals = "";
     ethPurchase?.map((price) => {
       ethTotals = (Number(price.Recieved) + Number(ethTotals)).toFixed(4);
     });
 
-    setEthTotal((ethTotals - totalEthWithdraw).toFixed(4));
+    setEthTotal((ethTotals - totalEthWithdraw).toFixed(2));
   });
 
   return (
@@ -158,17 +158,20 @@ const Header = ({ usdPurchase, gpbPurchase, btcPurchase, ethPurchase }) => {
                           tag="h5"
                           className="text-uppercase text-muted mb-0"
                         >
-                          Pound sterling
+                          GBP
                         </CardTitle>
                         <span className="h2 font-weight-bold mb-0">
                           {gbptotal ? (
-                            Number(gbptotal).toFixed(2)
+                            Number(usdtotal).toFixed(2)
                           ) : (
-                            <div class="spinner-grow" role="status">
-                              <span class="sr-only">Loading...</span>
+                            <div
+                              className="spinner-grow text-danger"
+                              role="status"
+                            >
+                              <span className="sr-only">Loading...</span>
                             </div>
                           )}{" "}
-                          £
+                          $
                         </span>
                       </div>
                       <Col className="col-auto">
@@ -215,7 +218,7 @@ const Header = ({ usdPurchase, gpbPurchase, btcPurchase, ethPurchase }) => {
                               <span class="sr-only">Loading...</span>
                             </div>
                           )}{" "}
-                          BTC
+                          <span className="h3">BTC</span>
                         </span>
                       </div>
                       <Col className="col-auto">
@@ -259,7 +262,7 @@ const Header = ({ usdPurchase, gpbPurchase, btcPurchase, ethPurchase }) => {
                               <span class="sr-only">Loading...</span>
                             </div>
                           )}{" "}
-                          ETH
+                          <span className="h3">ETH</span>
                         </span>
                       </div>
                       <Col className="col-auto">
