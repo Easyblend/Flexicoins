@@ -98,7 +98,7 @@ const Modal2 = ({
                   success: "Payment Successful",
                 }
               );
-              navigate("/admin/index");
+              window.location.reload();
               setModal2(false);
             } catch (error) {
               toast.error("Something's not right. Contact Us for help");

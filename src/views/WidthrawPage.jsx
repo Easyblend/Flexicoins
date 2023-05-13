@@ -158,15 +158,18 @@ const WidthrawPage = () => {
         }
       );
       navigate("/admin/index");
+      window.location.reload();
     } catch (error) {
       toast.error(error.code);
     }
   };
 
-  const allWithdrawal = usdDeduction
-    .concat(gbpDeduction)
-    .concat(btcDeduction)
-    .concat(ethDeduction);
+  const allWithdrawal =
+    usdDeduction &&
+    usdDeduction
+      .concat(gbpDeduction && gbpDeduction)
+      .concat(btcDeduction && btcDeduction)
+      .concat(ethDeduction && ethDeduction);
 
   return (
     <div className="pb-3">
@@ -460,16 +463,18 @@ const WidthrawPage = () => {
                 </tr>
 
                 <tbody>
-                  {allWithdrawal.map((withdraw) => {
-                    return (
-                      <tr className="border-1" key={new Date().getTime()}>
-                        <td>{new Date().getTime()}</td>
-                        <td>{withdraw.currency}</td>
-                        <td>{withdraw.Withdrawal_Amount_in_Ghc}</td>
-                        <td>{withdraw.date}</td>
-                      </tr>
-                    );
-                  })}
+                  {allWithdrawal
+                    ? allWithdrawal.map((withdraw) => {
+                        return (
+                          <tr className="border-1" key={new Date().getTime()}>
+                            <td>{new Date().getTime()}</td>
+                            <td>{withdraw.currency}</td>
+                            <td>{withdraw.Withdrawal_Amount_in_Ghc}</td>
+                            <td>{withdraw.date}</td>
+                          </tr>
+                        );
+                      })
+                    : null}
                 </tbody>
               </Table>
             </Container>

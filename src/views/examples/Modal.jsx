@@ -93,7 +93,7 @@ const Modal = ({
                   success: "Payment Successful",
                 }
               );
-              navigate("/admin/index");
+              window.location.reload();
               setModal(false);
             } catch (error) {
               toast.error("Payment Failed");

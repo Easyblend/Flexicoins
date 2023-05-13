@@ -207,13 +207,13 @@ const Index = () => {
                     data={{
                       labels:
                         activeNav === 1
-                          ? ["Day 1", ...graphUsdDate]
+                          ? ["No deposit yet", ...graphUsdDate]
                           : activeNav === 2
-                          ? ["Day 1", ...graphGbpDate]
+                          ? ["No deposit yet", ...graphGbpDate]
                           : activeNav === 3
-                          ? ["Day 1", ...graphBtcDate]
+                          ? ["No deposit yet", ...graphBtcDate]
                           : activeNav === 4
-                          ? ["Day 1", ...graphEthDate]
+                          ? ["No deposit yet", ...graphEthDate]
                           : ["First deposit"],
                       datasets: [
                         {
