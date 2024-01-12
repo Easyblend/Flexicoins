@@ -209,26 +209,26 @@ const Index = () => {
                         activeNav === 1
                           ? ["No deposit yet", ...graphUsdDate]
                           : activeNav === 2
-                          ? ["No deposit yet", ...graphGbpDate]
-                          : activeNav === 3
-                          ? ["No deposit yet", ...graphBtcDate]
-                          : activeNav === 4
-                          ? ["No deposit yet", ...graphEthDate]
-                          : ["First deposit"],
+                            ? ["No deposit yet", ...graphGbpDate]
+                            : activeNav === 3
+                              ? ["No deposit yet", ...graphBtcDate]
+                              : activeNav === 4
+                                ? ["No deposit yet", ...graphEthDate]
+                                : ["First deposit"],
                       datasets: [
                         {
                           fill: true,
-                          label: "Deposits GHC",
+                          label: "Deposits EUR",
                           data:
                             activeNav === 1
                               ? [0, ...graphUsd]
                               : activeNav === 2
-                              ? [0, ...graphGbp]
-                              : activeNav === 3
-                              ? [0, ...graphBtc]
-                              : activeNav === 4
-                              ? [0, ...graphEth]
-                              : ["First deposit"],
+                                ? [0, ...graphGbp]
+                                : activeNav === 3
+                                  ? [0, ...graphBtc]
+                                  : activeNav === 4
+                                    ? [0, ...graphEth]
+                                    : ["First deposit"],
 
                           backgroundColor: "#263238",
                         },
@@ -323,25 +323,25 @@ const Index = () => {
                         activeNav === 1
                           ? graphUsdDate
                           : activeNav === 2
-                          ? graphGbpDate
-                          : activeNav === 3
-                          ? graphBtcDate
-                          : activeNav === 4
-                          ? graphEthDate
-                          : ["First deposit"],
+                            ? graphGbpDate
+                            : activeNav === 3
+                              ? graphBtcDate
+                              : activeNav === 4
+                                ? graphEthDate
+                                : ["First deposit"],
                       datasets: [
                         {
-                          label: "Deposits GHC",
+                          label: "Deposits EUR",
                           data:
                             activeNav === 1
                               ? graphUsd
                               : activeNav === 2
-                              ? graphGbp
-                              : activeNav === 3
-                              ? graphBtc
-                              : activeNav === 4
-                              ? graphEth
-                              : ["First deposit"],
+                                ? graphGbp
+                                : activeNav === 3
+                                  ? graphBtc
+                                  : activeNav === 4
+                                    ? graphEth
+                                    : ["First deposit"],
                           maxBarThickness: 50,
                           backgroundColor: colors,
                         },
@@ -435,25 +435,25 @@ const Index = () => {
                         activeNav === 1
                           ? graphUsdDate
                           : activeNav === 2
-                          ? graphGbpDate
-                          : activeNav === 3
-                          ? graphBtcDate
-                          : activeNav === 4
-                          ? graphEthDate
-                          : ["First deposit"],
+                            ? graphGbpDate
+                            : activeNav === 3
+                              ? graphBtcDate
+                              : activeNav === 4
+                                ? graphEthDate
+                                : ["First deposit"],
                       datasets: [
                         {
-                          label: "Deposits GHC",
+                          label: "Deposits EUR",
                           data:
                             activeNav === 1
                               ? graphUsd
                               : activeNav === 2
-                              ? graphGbp
-                              : activeNav === 3
-                              ? graphBtc
-                              : activeNav === 4
-                              ? graphEth
-                              : ["First deposit"],
+                                ? graphGbp
+                                : activeNav === 3
+                                  ? graphBtc
+                                  : activeNav === 4
+                                    ? graphEth
+                                    : ["First deposit"],
                           maxBarThickness: 20,
                           backgroundColor: colors,
                         },

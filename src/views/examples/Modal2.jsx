@@ -134,7 +134,7 @@ const Modal2 = ({
         <h2>Confirm Crypto purchase</h2>
         <span>
           Payments are secured. Purchasing Crypto will reflect in your account
-          after the paymenr has been confirmed.
+          after the payment has been confirmed.
           <br />
           Having issues with your payment,{" "}
           <a href="mailto:support@flexicoins.com">Contact US</a>
@@ -233,7 +233,7 @@ const Modal2 = ({
                       onChange={(e) => setPurchasingAmount(e.target.value)}
                     />{" "}
                     <span>
-                      Purchasing amount in GHC{" "}
+                      Purchasing amount in EUR{" "}
                       <span className="text-danger">*</span>
                     </span>{" "}
                   </div>

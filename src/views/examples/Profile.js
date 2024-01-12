@@ -81,7 +81,7 @@ const Profile = () => {
       "https://twitter.com/intent/tweet?text=" +
       `https://flexicoins.com
      Flexicoins is here, Buy USD, GBP, Bitcoin and ethereum with mobile money wallet
-     Simple, Secure and Fast, also Earn 5GHC buy sharing`;
+     Simple, Secure and Fast, also Earn 5EUR buy sharing`;
     window.open(navUrl, "_blank");
   }
 
@@ -157,7 +157,7 @@ const Profile = () => {
                   </div>
                   <div className="h4 mt-4 text-info">
                     <i className="ni business_briefcase-24 mr-2" />
-                    You earn 5GHC Bonus when you share our Page.
+                    You earn 5EUR Bonus when you share our Page.
                   </div>
                   <div>
                     <i className="ni education_hat mr-2" />

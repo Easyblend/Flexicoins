@@ -3,11 +3,11 @@ import { toast } from "react-toastify";
 
 export const useFetchRates = () => {
   const options = {
-    method: "GET",
+    method: 'GET',
     headers: {
-      "X-RapidAPI-Key": process.env.REACT_APP_CURRENCY_API,
-      "X-RapidAPI-Host": "currency-converter-by-api-ninjas.p.rapidapi.com",
-    },
+      'X-RapidAPI-Key': '839ea37f2fmsh798b9b58e610d05p1de960jsn98c1f5d0d4d9',
+      'X-RapidAPI-Host': 'currency-converter-by-api-ninjas.p.rapidapi.com'
+    }
   };
 
   const [dollarRate, setDollarRate] = useState(0);
@@ -18,7 +18,7 @@ export const useFetchRates = () => {
   const getDollarRate = async () => {
     try {
       const response = await fetch(
-        "https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=GHS&want=USD&amount=1",
+        "https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=EUR&want=USD&amount=1",
         options
       );
       const data = await response.json();
@@ -26,7 +26,7 @@ export const useFetchRates = () => {
       setDollarRate(data.new_amount);
 
       const responseGbp = await fetch(
-        "https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=GHS&want=GBP&amount=1",
+        "https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=EUR&want=GBP&amount=1",
         options
       );
       const dataGbp = await responseGbp.json();

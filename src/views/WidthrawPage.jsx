@@ -123,15 +123,15 @@ const WidthrawPage = () => {
             withdrawal_Amount:
               currencyType == "BTC" || currencyType == "ETH"
                 ? (currencyType == "BTC"
-                    ? Number(
-                        (Number(withdrawAmount) * Number(dollarRate)) /
-                          Number(btcRate)
-                      )
-                    : Number(
-                        (Number(withdrawAmount) * Number(dollarRate)) /
-                          Number(ethRate)
-                      )
-                  ).toFixed(4)
+                  ? Number(
+                    (Number(withdrawAmount) * Number(dollarRate)) /
+                    Number(btcRate)
+                  )
+                  : Number(
+                    (Number(withdrawAmount) * Number(dollarRate)) /
+                    Number(ethRate)
+                  )
+                ).toFixed(4)
                 : Number(withdrawAmount * dollarRate),
             Withdrawal_Amount_in_Ghc:
               currencyType == "BTC" || currencyType == "ETH"
@@ -141,9 +141,9 @@ const WidthrawPage = () => {
             Availble_Balance:
               currencyType == "BTC" || currencyType == "ETH"
                 ? Number(
-                    Number(balance) -
-                      Number((withdrawAmount * dollarRate) / btcRate)
-                  ).toFixed(4)
+                  Number(balance) -
+                  Number((withdrawAmount * dollarRate) / btcRate)
+                ).toFixed(4)
                 : Number(balance) - Number(withdrawAmount * dollarRate),
             currency: currencyType,
             name: name,
@@ -465,15 +465,15 @@ const WidthrawPage = () => {
                 <tbody>
                   {allWithdrawal
                     ? allWithdrawal.map((withdraw) => {
-                        return (
-                          <tr className="border-1" key={new Date().getTime()}>
-                            <td>{new Date().getTime()}</td>
-                            <td>{withdraw.currency}</td>
-                            <td>{withdraw.Withdrawal_Amount_in_Ghc}</td>
-                            <td>{withdraw.date}</td>
-                          </tr>
-                        );
-                      })
+                      return (
+                        <tr className="border-1" key={new Date().getTime()}>
+                          <td>{new Date().getTime()}</td>
+                          <td>{withdraw.currency}</td>
+                          <td>{withdraw.Withdrawal_Amount_in_Ghc}</td>
+                          <td>{withdraw.date}</td>
+                        </tr>
+                      );
+                    })
                     : null}
                 </tbody>
               </Table>

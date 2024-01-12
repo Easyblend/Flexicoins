@@ -129,7 +129,7 @@ const Modal = ({
         <h2>Confirm Currency purchase</h2>
         <span>
           Payments are secured. Purchasing currency will reflect in your account
-          after the paymenr has be confirmed
+          after the payment has be confirmed
         </span>
       </div>
 

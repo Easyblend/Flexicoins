@@ -143,7 +143,7 @@ const Header = ({ usdPurchase, gpbPurchase, btcPurchase, ethPurchase }) => {
                       </span>{" "}
                       <span className="text-nowrap h4 text-muted">
                         {usdtotal ? (usdtotal / dollarRate).toFixed(2) : "0.00"}{" "}
-                        GHC
+                        EUR
                       </span>
                     </p>
                   </CardBody>
@@ -189,7 +189,7 @@ const Header = ({ usdPurchase, gpbPurchase, btcPurchase, ethPurchase }) => {
                         {gbptotal
                           ? Number(gbptotal / gbpRate).toFixed(2)
                           : "0.00"}{" "}
-                        GHC
+                        EUR
                       </span>
                     </p>
                   </CardBody>
@@ -236,7 +236,7 @@ const Header = ({ usdPurchase, gpbPurchase, btcPurchase, ethPurchase }) => {
                         {btctotal
                           ? ((btctotal * btcRate) / dollarRate).toFixed(2)
                           : "0.00"}{" "}
-                        GHC
+                        EUR
                       </span>
                     </p>
                   </CardBody>
@@ -279,7 +279,7 @@ const Header = ({ usdPurchase, gpbPurchase, btcPurchase, ethPurchase }) => {
                         {ethtotal
                           ? ((ethRate * ethtotal) / dollarRate).toFixed(2)
                           : "0.00"}{" "}
-                        GHC
+                        EUR
                       </span>
                     </p>
                   </CardBody>
