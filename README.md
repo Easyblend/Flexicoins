@@ -1,4 +1,4 @@
-# [FlexiCoins](https://flexicoins.com)
+# [FlexiCoins](https://flexicoins.netlify.app)
 
 ### Made with the help of Argon Dashboard and Other APIs
 
